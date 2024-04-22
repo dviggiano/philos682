@@ -48,6 +48,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-You can now execute the included code to run the experiments on your own.
+You can now execute the included code to run the experiments on your own, if you delete the existing `.csv` files found in the `results` directory (with `rm results/c-creativity.csv`, for instance).
 
 For example, you can run the combinatorial creativity experiments with `python3 code/c-creativity.py` on macOS or `python code/c-creativity.py` on Windows, so long as you are still in the same directory as the repository and you have activated the virtual environment with `source venv/bin/activate` on macOS or `venv\Scripts\activate` on Windows.
