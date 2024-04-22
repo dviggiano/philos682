@@ -28,7 +28,7 @@ OPENAI_API_KEY=insert your API key here (generate at https://platform.openai.com
 GOOGLE_API_KEY=insert your API key here (generate at https://ai.google.dev/)
 ```
 
-> You can open the file from the command line using `notepad .env` on Windows or `nano .env` on macOS.
+> You can open the file from the command line using `nano .env` on macOS or `notepad .env` on Windows.
 
 Finally, set up your Python environment (this will allow you to execute code with functions defined by OpenAI and Google to query their LLMs):
 
