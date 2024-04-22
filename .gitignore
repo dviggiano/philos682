@@ -1,0 +1,7 @@
+.env  # API keys
+.idea  # IDE settings
+venv  # Python environment
+.DS_Store  # macOS folder settings
+local  # misc. local files
+.ipynb_checkpoints
+__pycache__
