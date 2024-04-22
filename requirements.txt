@@ -1,0 +1,4 @@
+anthropic~=0.19.1
+python-dotenv~=1.0.1
+openai~=1.13.3
+google-generativeai~=0.4.0
