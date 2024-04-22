@@ -1,3 +1,7 @@
+"""
+Demonstrations of LLMs engaging in tasks in which they are likely to exhibit combinatorial creativity.
+"""
+
 from common import run_trials
 
 analogy_task = "Explain how a computer works by making analogies to a movie cast and crew."

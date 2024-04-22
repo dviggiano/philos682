@@ -1,3 +1,8 @@
+"""
+Demonstrations of LLMs engaging in simple reasoning and recall tasks,
+as well as synthesis of ideas between subdomains under prompt direction.
+"""
+
 import random
 
 from common import run_trials, ConversationPoint

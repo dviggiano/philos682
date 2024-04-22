@@ -1,3 +1,7 @@
+"""
+Demonstrations of LLMs acknowledging a modification to the logical rules of a domain with which they are familiar.
+"""
+
 from common import ConversationPoint, run_trials
 
 prompts = [

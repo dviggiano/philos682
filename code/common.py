@@ -1,3 +1,7 @@
+"""
+Functions used between experiments to query LLMs remotely.
+"""
+
 import copy
 
 from constants import MAX_TOKENS, NUM_TRIALS
