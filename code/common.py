@@ -20,15 +20,13 @@ import dataclasses
 
 models = [
     "GPT-4",
-    "Gemini",
-    # "Claude"
+    "Gemini"
 ]
 
 dotenv.load_dotenv()
 gpt = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 google.generativeai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 gemini = google.generativeai.GenerativeModel(model_name='gemini-pro')
-# claude = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
 
 
 def ask_llm(prompt: str, model: str) -> str:
@@ -53,20 +51,6 @@ def ask_llm(prompt: str, model: str) -> str:
                     return output
                 except:
                     continue
-        case 'Claude':  # unused
-            # response = claude.messages.create(
-            #     model='claude-3-opus-20240229',
-            #     messages=[
-            #         {
-            #             'role': 'user',
-            #             'content': prompt
-            #         }
-            #     ],
-            #     max_tokens=MAX_TOKENS
-            # )
-            # output = response.content[0].text
-            # return output
-            return ''
 
 
 @dataclasses.dataclass
@@ -106,8 +90,6 @@ def run_trials(filename: str, prompts: Iterable[str | Callable[[], str] | Iterab
     results = []
 
     for prompt in prompts:
-        print(prompt)
-
         for model in models:
             for trial in range(1, NUM_TRIALS + 1):
                 if callable(prompt):
@@ -131,8 +113,6 @@ def run_trials(filename: str, prompts: Iterable[str | Callable[[], str] | Iterab
                     converse_with_llm(prompts=actual_prompt, model=model),
                     get_timestamp()
                 ])
-
-                print(f"\t{model}, trial {trial}")
 
     with open(f'results/{filename}.csv', 'w') as file:
         writer = csv.writer(file)
