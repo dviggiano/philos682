@@ -1,5 +1,9 @@
 """
-Demonstrations of LLMs acknowledging a modification to the logical rules of a domain with which they are familiar.
+Demonstrations of LLMs acknowledging a modification to the logical rules of a domain with which they are familiar,
+as indicated by a prompt.
+
+Note that such a modification can also be incited (in theory) in other ways,
+such as a hallucination, or identification via a prompt that the LLM has presented a logical inconsistency.
 """
 
 from common import ConversationPoint, run_trials
